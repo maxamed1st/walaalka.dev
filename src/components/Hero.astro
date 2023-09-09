@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import mo from "../assets/mo1.jpg";
+---
+
+<header
+  class="bg-base2 border border-neutral flex justify-around items-center w-full rounded-3xl h-[90vh]"
+>
+  <section class="leading-8 font-extralight flex flex-col">
+    <div class="text-9xl font-serif">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="gold"
+        stroke="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="inline align-top rotate-180"
+      >
+        <path
+          d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+        ></path><path
+          d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
+        ></path>
+      </svg>
+       Mohamed <br /> Hassan
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="gold"
+        stroke="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="inline align-bottom"
+      >
+        <path
+          d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+        ></path><path
+          d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
+        ></path>
+      </svg>
+    </div>
+    <div class="font-sans text-ghost italic text-3xl mt-4">
+      Software Engineer, specialized in Web Development
+    </div>
+  </section>
+  <section class="flex flex-col justify-center items-center -60 w-60">
+    <div>
+      <Image
+        src={mo}
+        alt="Picture of walaalka"
+        class="rounded-full border-8 border-accent2"
+      />
+    </div>
+
+      <div
+        class="font-serif text-center mt-4 flex gap-2 justify-center items-baseline"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="green"
+          class="inline h-full self-center fill-success"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+        </svg>
+        <button
+          class="relative z-10 rounded-lg py-2 px-5 text-xl"
+        >
+          Hire Me
+        </button>
+      </div>
+  </section>
+</header>
+
+<style>
+  :root {
+    --accent: hsl(30, 67%, 40%);
+    --light: hsl(0, 0%, 85%);
+  }
+  button {
+    position: relative;
+    color: var(--light);
+    border-width: 2px;
+    border-style: dashed solid;
+    border-color: var(--light);
+  }
+  button::before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    background: var(--accent);
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    border-radius: 0.2rem;
+    animation: 400ms 1 slideout;
+  }
+  button:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    animation: 400ms 1 slidein;
+  }
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      border-radius: 0.5rem;
+      }
+
+    to {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.2rem;
+      }
+    }
+
+  @keyframes slideout {
+    from {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.2rem;
+      }
+
+    to {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      border-radius: 0.5rem;
+      }
+    }
+</style>
