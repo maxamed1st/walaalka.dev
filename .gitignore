@@ -20,5 +20,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-#local appearance testing
+#local files
 src/pages/testui.astro
+package-lock.json
+
