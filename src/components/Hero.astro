@@ -1,45 +1,15 @@
+---
+import Icon from "./Icon.svelte";
+---
+
 <header
   class="bg-base2 border border-neutral flex justify-around items-center w-full rounded-3xl h-[90vh]"
 >
   <section class="leading-8 font-extralight flex flex-col">
     <div class="text-9xl font-serif">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="gold"
-        stroke="none"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="inline align-top rotate-180"
-      >
-        <path
-          d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
-        ></path><path
-          d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
-        ></path>
-      </svg>
+      <Icon id="openQuotes" />
        Mohamed <br /> Hassan
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="gold"
-        stroke="none"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="inline align-bottom"
-      >
-        <path
-          d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
-        ></path><path
-          d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
-        ></path>
-      </svg>
+      <Icon id="closeQuotes" />
     </div>
     <div class="font-sans text-ghost italic text-2xl mt-4">
       Software Engineer, specialized in App and Web Development
@@ -57,16 +27,7 @@
       <div
         class="font-serif text-center mt-4 flex gap-2 justify-center items-baseline"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="green"
-          class="inline h-full self-center fill-success"
-        >
-          <circle cx="12" cy="12" r="10"></circle>
-        </svg>
+        <Icon id="circle" />
         <button
           class="relative z-10 rounded-lg py-2 px-5 text-xl"
         >
